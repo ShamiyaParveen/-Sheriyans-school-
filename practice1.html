@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div style="margin:100px 0">
+    <form>
+        <input type ="text" placeholder="Enter your name">
+        <input type="text" placeholder="Enter your last name">
+        <button type="submit" class="submit">save</button>
+        <h4 class="error1"></h4>
+    </form>
+</div>
+
+<script>
+    var form1 = document.querySelector('form');
+    var inps = document.querySelectorAll('input[type = "text"]');
+    var save = document.querySelector('.submit');
+    var h4 = document.querySelector('.error1');
+ 
+
+    form1.addEventListener('submit', function(ev){  // click, submit , change , input ye sab event hote hai, submit form ke liye use hota hai, click kisi bhi element ke liye use hota hai, change input field me changes karne ke baad use hota hai, input jab bhi user kuch type karta hai tab use hota hai
+            ev.preventDefault();
+
+        inps.forEach(function(inp){
+        if(inp.value === ''){
+            h4.textContent = "Please fill in all the fields";
+            h4.style.color = "red";
+        }
+        else{
+            h4.textContent = "Form submitted successfully!";
+            h4.style.color = "green";
+        }
+      });
+    })
+</script>
+
+
+</body>
+</html>

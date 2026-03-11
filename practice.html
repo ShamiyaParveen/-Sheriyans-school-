@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- craeting a button and a paragraph. When the button is clicked, change the text of the paragraph to "Button Clicked!". -->
+
+    <button>Click Me</button>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, dolor eius ratione voluptatum quasi nostrum. In odio cum mollitia explicabo alias consequuntur rerum, assumenda nihil ipsum animi, incidunt ullam omnis?
+    Alias perspiciatis doloremque provident sapiente possimus a voluptatum eos consequatur ad laboriosam optio eum numquam, molestiae ex maiores iusto fugit corrupti dignissimos aut! Suscipit quidem, facilis facere porro accusamus voluptatum?</p>
+
+    <script>
+        //selection is always on top is a good practice
+        var btn = document.querySelector('button');
+        var para = document.querySelector('p');
+        btn.addEventListener('click', function(){
+            para.textContent = "Button Clicked! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.";
+        })
+    </script>
+
+<!-- creating two images and a button. When the button is clicked, swap the sources of the two images. -->
+
+<div style="margin:100px 0">
+    <img class="img1" src="https://i.pinimg.com/736x/de/75/04/de75044c9663417cf9e120d5a1f4c1b9.jpg" alt="W3Schools.com" width="200" height="250">
+    <img class="img2" src="https://i.pinimg.com/736x/82/29/b8/8229b80ffc1d5802b049db5e624eaf6c.jpg" alt="W3Schools.com" width="200" height="250">
+    <button class="btn-swap">swap images</button>
+</div>
+
+<script>
+    var img1 = document.querySelector('.img1');
+    var img2 = document.querySelector('.img2');
+    var btnswap = document.querySelector('.btn-swap');
+
+    btnswap.addEventListener('click', function(){
+        // img1.src="https://i.pinimg.com/736x/82/29/b8/8229b80ffc1d5802b049db5e624eaf6c.jpg";
+        // img2.src="https://i.pinimg.com/736x/de/75/04/de75044c9663417cf9e120d5a1f4c1b9.jpg";
+        //or we can do it like this
+
+        var src1 = img1.src;
+        var src2 = img2.src;
+
+        img1.src = src2;
+        img2.src = src1;
+    });
+</script>
+
+
+ <!-- creating a form with two input fields (name and age) and a submit button. When the form is submitted, validate that both fields are filled in. If any field is empty, display an error message below the form. -->
+
+<div style="margin:100px 0">
+    <form>
+        <input class="inp1" type = "text" placeholder="Enter your name">
+        <input class="inp2" type="number" placeholder="Enter your age">
+        <button class="btn-submit">Submit</button>
+        <h4 class="error"></h4>
+    </form>
+</div>
+
+<script>
+    var form = document.querySelector('form');
+    var inp1 = document.querySelector('.inp1');
+    var inp2 = document.querySelector('.inp2');
+    var btnsubmit = document.querySelector('.btn-submit');
+    var error = document.querySelector('.error');
+
+    form.addEventListener('submit', function(event){
+        event.preventDefault(); //ye page reload hone se rokta hai
+
+        if (inp1.value.trim() === '' || inp2.value.trim() === ''){ // spaces ko rokne ke liye trim() use karte hai, ye extra spaces ko remove karta hai
+            //console.log("blank");
+            error.textContent = "Please fill in all the fields";
+            error.style.color = "red";
+        }
+        else{
+             error.textContent = "Form submitted successfully!";
+            error.style.color = "green";
+        }
+    })
+
+</script>
+
+
+
+
+
+</body>
+</html>

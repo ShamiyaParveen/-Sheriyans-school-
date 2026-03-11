@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- create a list of products and a button to add and remove product. When the button is clicked, add a new product to the list. -->
+
+<div style="margin: 100px 0;">
+    <ul>
+    </ul>
+    <input type="text" placeholder="Enter Product Name">
+    <button class="add-btn">Add Product</button>
+     <button class="remove-btn">Remove Product</button>
+</div>
+
+
+<script>
+    var add = document.querySelector('.add-btn');
+    var remove = document.querySelector('.remove-btn');
+    var inp = document.querySelector('input');
+    var ul = document.querySelector('ul')
+
+    add.addEventListener('click', function(){
+        if(inp.value.trim()===''){}
+        else{
+            var li = document.createElement('li');  //agar hum li ko global variable bana lete to har bar ek hi li create hota aur usi ko update karta rehta, isliye humne li ko function ke andar banaya taki har bar ek naya li create ho.    
+            li.textContent = inp.value;
+            //console.log(li);
+            ul.appendChild(li);
+            inp.value = '';
+
+        }
+    });
+     remove.addEventListener('click', function(){
+       if(ul.lastChild){
+        ul.removeChild(ul.lastChild);
+       }
+    })
+</script>
+
+</body>
+</html>

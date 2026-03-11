@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- create a countdown timer that starts from 0 and increments every second. When the stop button is clicked, the timer should stop. -->
+     
+    <h3>0</h3>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        var start = document.querySelector('#start');
+        var stop = document.querySelector('#stop');
+        var h3 = document.querySelector('h3');
+        var int;
+        start.addEventListener('click', function(){
+            //setInterval(cakkback function, timer in milliseconds)
+            var count = 0;
+            int = setInterval(function(){
+                h3.textContent = count;
+                count++;
+            }, 1000)
+        })
+         stop.addEventListener('click', function(){
+          clearInterval(int);
+        })
+    </script>
+</body>
+</html>

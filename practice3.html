@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- craete a input field and a button. When the button is clicked, display an alert with the value of the input field. -->
+
+<form>
+    <input type="text" placeholder="Enter Your Name">
+    <input type="text" placeholder="Enter Your Last Name">
+    <button type="submit" class="submit">Submit</button>
+    <h4></h4>
+</form>
+
+<script>
+    var form = document.querySelector('form');
+    var inps = document.querySelectorAll('input[type="text"]');
+    var h4 = document.querySelector('h4');
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+       // console.log(inps.length);
+        for(var i=0; i<inps.length; i++){
+            if(inps[i].value.trim()===''){
+                h4.textContent = "required field";
+                h4.style.color= "red";
+                break;
+            }
+            else{
+                h4.textContent = "submited Successfully";
+                h4.style.color = "green";
+            }
+        }
+    })
+</script>
+
+<!-- nodeList array jaisa hota hai, forEach method use kar sakte hai, for loop bhi use kar sakte hai, for of loop bhi use kar sakte hai, for in loop bhi use kar sakte hai, but for in loop object ke liye use hota hai, array ke liye use nahi hota hai, for of loop array ke liye use hota hai, object ke liye use nahi hota hai, forEach method array ke liye use hota hai, object ke liye use nahi hota hai, for loop array ke liye use hota hai, object ke liye use nahi hota hai. -->
+
+
+
+
+
+</body>
+</html>
