@@ -1,96 +1,176 @@
-# -Sheriyans-school-
-Learning from Sheriyans school  - html css js gsap reactjs
+# 🚀 Sheriyans School – Web Development Journey
 
-+# Scroll Layout Landing Page
-+
-+A simple static HTML and CSS project with a clean two-level navigation bar, horizontally scrollable text banners, and a horizontal image gallery.
-+
-+## Preview
-+
-+This project includes:
-+
-+- Top navigation with language, country, profile, wishlist, and search links
-+- Secondary navigation with Home, Shop, Blog, Pages, and Contact
-+- Large scrolling keyword section
-+- Horizontal image showcase
-+- Custom scrollbar styling for the text section
-+
-+## Built With
-+
-+- HTML5
-+- CSS3
-+
-+## Project Structure
-+
-+```text
-+project1/
-+|-- index1.html
-+|-- style.css
-+|-- README.md
-+```
-+
-+## How to Run
-+
-+1. Open the `project1` folder.
-+2. Double-click `index1.html`, or open it with Live Server in VS Code.
-+
-+## Notes
-+
-+- The page uses external image URLs, so an internet connection is needed for the images to load.
-+- The project is fully static and does not require any installation or build step.
-+
-+## Possible Improvements
-+
-+- Add responsive styles for smaller screens
-+- Replace placeholder title text with a project-specific page title
-+- Add hover effects and active states to navigation items
-+- Improve accessibility with semantic landmarks and better alt text
-+
-+## Author
-+
-+Upload this folder to GitHub as a small frontend practice project or UI layout exercise.
+This repository documents my **daily learning journey in Web Development** while studying from **Sheriyans Coding School**.
 
+I am learning and practicing:
 
+* HTML
+* CSS
+* JavaScript
+* GSAP
+* ReactJS
 
-# Day 1 – HTML & CSS Responsive Website
+Every day I:
 
-## 📌 Overview
-This project is part of my learning journey with Sheriyans Coding School.  
-On Day 1, I created the basic structure of a website using **HTML and CSS** and started learning how to make it **responsive for different screen sizes**.
+* 📒 Write **development notes**
+* 💻 Solve **JavaScript practice questions**
+* 🛠 Build **mini projects**
+* 📚 Practice **DOM manipulation and logic building**
 
-The goal of this project was to understand the fundamentals of web development and how a webpage layout adapts to different devices such as mobile, tablet, and desktop. Responsive design ensures that a website looks good and works properly on all screen sizes. :contentReference[oaicite:0]{index=0}
+The goal of this repository is to **track my progress, improve problem-solving skills, and build strong frontend development fundamentals.**
 
 ---
 
-## 🚀 What I Learned
-- Basic structure of an HTML webpage
-- Linking CSS with HTML
-- Styling elements using CSS
-- Creating layout using **divs**
-- Understanding **margin, padding, and box model**
-- Introduction to **responsive design**
-- Using **media queries** to adjust layout for different screen sizes
+# 📅 Learning Structure
+
+My learning process follows a **daily step-by-step approach**:
+
+### 1️⃣ Learning Concepts
+
+First I learn concepts from **Sheriyans Coding School lectures**.
+
+Examples:
+
+* HTML structure
+* CSS layout and styling
+* JavaScript fundamentals
+* DOM manipulation
+* Events and functions
 
 ---
 
-## 🛠 Technologies Used
-- HTML5
-- CSS3
-- 
-+## JavaScript Question Solutions
-+
-+This repository also includes JavaScript practice code in the root [`script.js`](c:/Users/techm/OneDrive/Desktop/html-cssjs-gsap-react/script.js) file.
-+
-+Topics covered in that file:
-+
-+- DOM selection methods
-+- `textContent` and `innerHTML`
-+- Styling elements with JavaScript
-+- `classList.add()` and `classList.remove()`
-+- Creating and removing elements
-+- Button click events
-+- Mouse move event handling
-+
-+You can present it on GitHub as basic JavaScript question solving and DOM practice work alongside this HTML/CSS project.
-+
- ## Possible Improvements
+### 2️⃣ Writing Notes
+
+After learning a concept, I create **clear notes** so I can revise later.
+
+Notes include:
+
+* Definitions
+* Syntax examples
+* Code snippets
+* Important concepts
+
+This helps me **understand and remember concepts better.**
+
+---
+
+### 3️⃣ JavaScript Practice
+
+I solve **JavaScript practice questions** regularly to improve logic building.
+
+Topics I practice:
+
+* Variables and data types
+* Functions
+* Loops
+* Conditions
+* Arrays and objects
+* DOM manipulation
+* Event handling
+
+Example practice:
+
+* Changing text using JavaScript
+* Adding and removing elements
+* Button click events
+* Form validation
+* Mouse events
+
+---
+
+### 4️⃣ Mini Projects
+
+To apply my learning, I build **small frontend projects**.
+
+Projects help me understand:
+
+* Real-world layout building
+* Styling components
+* Responsive design
+* Interactive UI with JavaScript
+
+Example projects:
+
+* Landing pages
+* Responsive layouts
+* Scroll layouts
+* DOM manipulation projects
+
+---
+
+# 🛠 Technologies Used
+
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **GSAP (for animations)**
+* **ReactJS (learning stage)**
+
+---
+
+# 📂 Repository Structure
+
+```
+-Sheriyans-school-
+
+│
+├── Notes/
+│   ├── html-notes.md
+│   ├── css-notes.md
+│   └── javascript-notes.md
+│
+├── JS-Practice/
+│   ├── script.js
+│   └── practice-questions.md
+│
+├── Projects/
+│   ├── responsive-website/
+│   ├── scroll-layout/
+│   └── landing-page/
+│
+└── README.md
+```
+
+---
+
+# 💡 Skills I Am Developing
+
+Through this learning journey, I am improving:
+
+* Frontend development fundamentals
+* Problem solving with JavaScript
+* DOM manipulation
+* Responsive website development
+* Writing clean and structured code
+* Building real-world UI layouts
+
+---
+
+# 🎯 Goal
+
+My goal is to become a **Frontend Developer** by building strong skills in:
+
+* JavaScript
+* ReactJS
+* Modern UI development
+* Responsive web design
+
+---
+
+# 👩‍💻 Author
+
+**Shamiya Ansari**
+
+Frontend Developer (Learning Phase)
+
+Currently practicing:
+
+* HTML
+* CSS
+* JavaScript
+* GSAP
+* ReactJS
+
+---
+
+⭐ This repository represents my **daily progress and consistent learning in web development.**
