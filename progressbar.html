@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- //Create a download progress bar that fills up over time and displays a message when the download is complete. -->
+    <style>
+        #downloadbar{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 10px;
+            border: 1px solid #dedede;
+            border-radius: 100px;
+            margin: 50px auto;
+        }
+        #progressbar{
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+            width: 0%;
+            height: 100%;
+            border-radius: 100px;
+            background-color: green;
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="downloadbar">
+        <div id="progressbar"></div>
+        <h3></h3>
+    </div>
+
+    <script>
+        var prg = document.querySelector("#progressbar");
+        var h3 = document.querySelector("h3");
+
+        var count = 0;
+        var timer = setInterval(function(){
+            if(count === 30){
+                 h3.textContent = "Download Complete";
+                 h3.style.color = "green";
+                clearInterval(timer);
+                return;
+                
+            }
+            count++;
+            prg.style.width = count+"%";
+            
+        }, 100)
+
+
+    </script>
+    
+</body>
+</html>
