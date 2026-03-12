@@ -6,6 +6,54 @@
     <title>Time Counter</title>
 </head>
 <body>
-    
+    <h3>00:00:00</h3>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        var h3 = document.querySelector('h3');
+        var seconds = 0;
+        var minutes = 0;
+        var hours = 0;
+        var timer;
+
+        function start(){
+             if(timer)return;
+            timer = setInterval(function(){
+                seconds++;
+
+                if(seconds == 60){
+                    seconds = 0;
+                    minutes++;
+                }
+
+                if(minutes == 60){
+                    minutes = 0;
+                    hours++;
+                }
+
+                let s = (seconds<10 ? '0'+seconds : seconds);
+                let m = (minutes<10 ? '0'+minutes : minutes);
+                let h = (hours<10 ? '0'+hours : hours);
+
+                h3.textContent = h + ":" + m + ":" + s;
+            }, 1000)
+        }
+        function stop(){
+            clearInterval(timer);
+            timer = null;
+        }
+
+        function reset(){
+            clearInterval(timer);
+            timer = null;
+            seconds = 0;
+            minutes = 0;    
+            hours = 0;
+            h3.textContent = "00:00:00";
+        }
+
+    </script>
 </body>
 </html>
