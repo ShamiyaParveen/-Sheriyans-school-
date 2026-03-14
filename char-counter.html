@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h3>Character Counter :<span id="counter">0</span> </h3>
+    <textarea></textarea>
+
+
+<script>
+
+var textarea = document.querySelector("textarea");
+var h3 = document.querySelector("h3");
+var counter = document.querySelector("#counter")
+var count;
+textarea.addEventListener("input", function(){
+   count = textarea.value.length;
+   counter.textContent = count ;
+   count++;
+})
+
+
+</script>
+    
+</body>
+</html>
