@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #search {
+            width: 50%;
+            padding: 20px 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+
+        input::placeholder {
+            color: #999;
+            font-size: 16px;
+        }
+
+        .name-list {
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .name {
+            padding: 8px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Create a search bar that display live search results as user type , updating the results without requering a full page reload -->
+
+    <h1>Search</h1>
+    <div class="search-container">
+        <input id="search" type="text" placeholder="Search...">
+    </div>
+
+    <div class="name-list">
+
+
+    </div>
+
+    <script>
+
+        var search = document.querySelector("#search");
+        var namelist = document.querySelector(".name-list");
+        var data = [
+            { name: "Sham", src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" },
+            { name: "Shamiya", src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" },
+            { name: "Shreya", src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" },
+            { name: "Zoobi", src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" },
+
+        ]
+
+        var person = "";
+        data.forEach(function (e) {
+            person += ` <div>
+             <img src=${e.src} alt="Product Image">
+       <div class="name">${e.name}</div>
+        </div>`
+        });
+        namelist.innerHTML = person;
+
+        search.addEventListener("input", function () {
+            var matching = data.filter(function (per) {
+                return per.name.toLowerCase().startsWith(search.value)
+            })
+
+            var newuser = "";
+            matching.forEach(function (elem) {
+                newuser += `<div>
+             <img src=${elem.src} alt="Product Image">
+       <div class="name">${elem.name}</div>
+        </div>`;
+            })
+            namelist.innerHTML = newuser;
+
+        })
+
+    </script>
+
+</body>
+
+</html>
